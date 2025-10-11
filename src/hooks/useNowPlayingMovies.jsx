@@ -15,7 +15,7 @@ const useNowPlayingMovies = () => {
       const json = await data.json();
       dispatch(addNowPlayingMovies(json.results));
     } catch (err) {
-      console.error("Trakt fetch error:", err);
+      console.error("Trakt fetch error for Now Playing Movies:", err);
     }
   };
 
