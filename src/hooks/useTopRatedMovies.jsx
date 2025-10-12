@@ -14,9 +14,8 @@ const useTopRatedMovies = () => {
       );
       const json = await data.json();
       dispatch(addTopRatedMovies(json.results));
-      console.log(json.results);
     } catch (error) {
-      console.log("Trakt fetch error for Top Rated Movies:", error);
+      console.error("Trakt fetch error for Top Rated Movies:", error);
     }
   };
 
